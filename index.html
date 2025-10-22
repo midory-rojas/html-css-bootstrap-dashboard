@@ -9,10 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
@@ -21,294 +17,467 @@
 </head>
 
 <body>
-    <header>
-        <!--Navbar-->
-        <section>
-            <nav class="navbar bg-dark navbar-expand-lg" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img class="logo" src="./img/duck.png" alt="logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Anagrafica Utenti</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Storico Prestiti</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Help</a>
-                            </li>
-                        </ul>
-                    </div>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+
+                <!--Logo-->
+                <a class="navbar-brand" href="#">
+                    <img class="ab-logo" src="/img/duck.png" alt="logo" />
+                </a>
+
+                <!--Menu ad hamburger-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Menu di navigazione-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!--menu sinistro-->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Catalogo libri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Anagrafica Utenti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Storico Prestiti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Help</a>
+                        </li>
+                    </ul>
+
+                    <!--menu destro-->
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            data-bs-theme="light" />
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
                 </div>
-            </nav>
-        </section>
-        <!--Fine Navbar-->
+            </div>
+        </nav>
     </header>
-    <main>
-        <section1>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="py-4 d-flex justify-content-between">
-                            <h1>Catalogo libri</h1>
-                            <button type="button" class="btn btn-primary">Aggiungi Libro</button>
+    <main class="pt-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-12 col-lg-8 mb-4">
+                    <!--Titolo-->
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h1>Catalogo libri</h1>
+                        <a class="btn btn-primary" href="">Aggiungi un libro</a>
+                    </div>
+
+                    <!--Tabella-->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="w-40">Titolo</th>
+                                <th class="d-none d-md-table-cell" scope="col">Data prestito</th>
+                                <th scope="col">Stato</th>
+                                <th scope="col">Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">I pilastri della terra</th>
+                                <td class="d-none d-md-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+                                        </svg>
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">I promessi sposi</th>
+                                <td class="d-none d-md-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+                                        </svg>
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Il signore degli anelli</th>
+                                <td class="d-none d-md-table-cell">18/10/2023</td>
+                                <td>
+                                    <span class="badge bg-warning">In prestito</span>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+                                        </svg>
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Harry Potter e la pietra filosofale</th>
+                                <td class="d-none d-md-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+                                        </svg>
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Il codice Da Vinci</th>
+                                <td class="d-none d-md-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-danger">Non disponibile</span>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+                                        </svg>
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Shining</th>
+                                <td class="d-none d-md-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+                                        </svg>
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">La divina commedia</th>
+                                <td class="d-none d-md-table-cell">21/09/2023</td>
+                                <td>
+                                    <span class="badge bg-warning">In prestito</span>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+                                        </svg>
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Il trono di spade</th>
+                                <td class="d-none d-md-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+                                        </svg>
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Il mondo di Sofia</th>
+                                <td class="d-none d-md-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-danger">Non disponibile</span>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+                                        </svg>
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Le cronache di Narnia: il leone, la strega e l'armadio</th>
+                                <td class="d-none d-md-table-cell">25/07/2023</td>
+                                <td>
+                                    <span class="badge bg-warning">In prestito</span>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+                                        </svg>
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Il picolo principe</th>
+                                <td class="d-none d-md-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+                                        </svg>
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">La storia finita</th>
+                                <td class="d-none d-md-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+                                        </svg>
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <!--Todo-->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h2>Todo</h2>
                         </div>
-                        <div class="class">
-                            <!--Table header-->
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col">Titolo</th>
-                                        <th scope="col">Stato</th>
-                                        <th scope="col">Azioni</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!--prima riga-->
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>I pilastri della terra</td>
-                                        <td><span class="badge bg-success">Disponibile</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-pencil-fill"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <!--seconda riga-->
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>I promessi sposi</td>
-                                        <td><span class="badge bg-success">Disponibile</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-pencil-fill"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <!--terza riga-->
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>I signore degli anelli</td>
-                                        <td><span class="badge bg-warning">In prestito</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-pencil-fill"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <!--quarta riga-->
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>Harry Potter e la piertra filosofale</td>
-                                        <td><span class="badge bg-success">Disponibile</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-pencil-fill"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <!--quinta riga-->
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>Il codice Da Vinci</td>
-                                        <td><span class="badge bg-danger">Non disponibile</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-pencil-fill"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <!--sesta riga-->
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>Shining</td>
-                                        <td><span class="badge bg-success">Disponibile</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-pencil-fill"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <!--settima riga-->
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>La divina commedia</td>
-                                        <td><span class="badge bg-warning">In prestito</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-pencil-fill"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <!--ottava riga-->
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>Il trono di spade</td>
-                                        <td><span class="badge bg-success">Disponibile</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-pencil-fill"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <!--novena riga-->
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>Il mondo di sofia</td>
-                                        <td><span class="badge bg-danger">Non disponibile</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-pencil-fill"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <!--decima riga-->
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>Le cronache di Narnia:il leone, la strega e l'armadio</td>
-                                        <td><span class="badge bg-warning">In prestito</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-pencil-fill"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <!--11 riga-->
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>Il piccolo principe</td>
-                                        <td><span class="badge bg-success">Disponibile</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-pencil-fill"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <!--12 riga-->
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>La storia infinita</td>
-                                        <td><span class="badge bg-success">Disponibile</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-pencil-fill"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"><i
-                                                    class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <!--Fine Table-->
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">Chiamare segretaria</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                                    <label class="form-check-label" for="secondCheckbox">Mandare avvisi prestiti
+                                        scaduti</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                                    <label class="form-check-label" for="thirdCheckbox">Ordinare nuovi libri</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--FAQ-->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h2>F.A.Q.</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Come aggiungere un nuovo libro?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">Placeholder content for this accordion, which is
+                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                            first item’s accordion body.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            Come posso accedere all'anagrafica utenti?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">Placeholder content for this accordion, which is
+                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                            second item’s accordion body. Let’s imagine this being filled with some
+                                            actual content.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            Posso usare questa dashboard da mobile?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">Placeholder content for this accordion, which is
+                                            intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                            third item’s accordion body. Nothing more exciting happening here in terms
+                                            of content, but just filling up the space to make it look, at least at first
+                                            glance, a bit more representative of how this would look in a real-world
+                                            application.</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </section>
-            <!--Inizio Card-->
-            <section2>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2>Todo</h2>
-                                </div>
-                                <div class="card-body">
-                                    <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value=""
-                                                id="firstCheckboxStretched">
-                                            <label class="form-check-label stretched-link"
-                                                for="firstCheckboxStretched">First checkbox</label>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value=""
-                                                id="secondCheckboxStretched">
-                                            <label class="form-check-label stretched-link"
-                                                for="secondCheckboxStretched">Second checkbox</label>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value=""
-                                                id="thirdCheckboxStretched">
-                                            <label class="form-check-label stretched-link"
-                                                for="thirdCheckboxStretched">Third checkbox</label>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-                <!--Fine Card-->
-                <section3>
-                <!--Accordion-->
-                    <div class="container py-4">
-                        <div class="row">
-                            <div class="col12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h2>F.A.Q.</h2>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="accordion accordion-flush" id="accordionFlushExample">
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                                        aria-expanded="false" aria-controls="flush-collapseOne">
-                                                        Come aggiungere un nuovo libro?
-                                                    </button>
-                                                </h2>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                                        aria-expanded="false" aria-controls="flush-collapseTwo">
-                                                        Come posso accedere all'anagrafica utenti?
-                                                    </button>
-                                                </h2>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                                        aria-expanded="false" aria-controls="flush-collapseThree">
-                                                        Posso usare questa dashboard da mobile?
-                                                    </button>
-                                                </h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                </section3>
-               <!--Fine accordion-->
+        </div>
     </main>
+    <!--Javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
